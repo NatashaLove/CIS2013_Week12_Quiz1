@@ -53,12 +53,16 @@ class House {
 			cin >> windows;
 				
 		}
+		void ex () {
+			cout << "					Good bye! " << endl;
+			exit (1);
+		}
 };
 
 int main () {
 	
-	 char c, y, p, g, d, w;
-	 // where : c = color,  y = year,  p = print, g = g_doors, d = doors, w = windows; 
+	 char c, y, p, g, d, w, e;
+	 // where : c = color,  y = year,  p = print, g = g_doors, d = doors, w = windows, e = exit; 
 	char choice;
 	House house;
 	
@@ -95,11 +99,12 @@ int main () {
 	cout << "Set amount of garage doors in your house (g)  " << endl;
 	cout << "Set amount of doors in your house (d) " << endl;
 	cout << "Set amount of windows in your house (w) " << endl;
-	
+		
 	cout << "Print your House's value (p) " << endl;
 	cout << endl;
-	cout << "		*****		" << endl;
-	
+	cout << "EXIT the constructor (e) " << endl;
+	cout << "	*****   *****	*****		" << endl;
+	cout << endl;
 	cout << "Your choice is : ";
 	cin >> choice;
 		switch (choice)
@@ -121,6 +126,9 @@ int main () {
 		break;
 		case 'w' :
 		house.set_windows ();
+		break;
+		case 'e' :
+		house.ex ();
 		break;
 				
 		default : 
